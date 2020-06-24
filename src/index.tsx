@@ -10,14 +10,14 @@ import * as serviceWorker from './serviceWorker';
 import pkg from '../package.json';
 
 const generateClassName = createGenerateClassName({
-  seed: 'child-2',
-  productionPrefix: 'child-2',
+  seed: 'child2',
+  productionPrefix: 'c2',
 });
 
 const renderApp = (containerId: string, props?: Partial<AppProps>) => {
   ReactDOM.render(
     <React.StrictMode>
-      <StylesProvider key="child-2" generateClassName={generateClassName}>
+      <StylesProvider generateClassName={generateClassName}>
         <App {...props} />
       </StylesProvider>
     </React.StrictMode>,
